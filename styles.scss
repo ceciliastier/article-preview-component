@@ -1,0 +1,171 @@
+body{
+    background-color: #ECF2F8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+    font-family: 'Manrope', sans-serif;
+}
+.card{
+    height: 512px;
+    width: 327px;
+    border: none;
+    border-radius: 10px;
+    filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.11));
+}
+.row{
+    height: 100%;
+}
+
+.card-body{
+    padding: 2% 9% 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+h1{
+    font-weight: 700;
+    font-size: 1em;
+    color: #48556A;
+    margin-bottom: 8%;
+    line-height: 1.5em;
+}
+p{
+    font-size: 0.8125em;
+    color: #6E8098;
+}
+.img{
+    background-image: url(images/drawers.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 50% 25%;
+    height: 200px;
+    border-radius: 10px 10px 0 0;
+}
+.author-img{
+    width: 40px;
+    border-radius: 100%;
+    margin-right: 15px;
+}
+.author{
+    font-size: 0.8125em;
+    display: flex;
+    div{
+        display: flex;
+        flex-direction: column;
+    }
+    .name{
+        color: #48556A;
+        font-weight: 700;
+    }
+    .date{
+        color: #9DAEC2;
+
+    }
+}
+.share{
+    .share-options{
+        display: none;
+        background-color: #48556A;
+        color: #9DAEC2;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-size: 0.8125em;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0 40px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        img{
+            width: 20px;
+            height: 20px;
+            margin-left: 15px;
+        }
+    }
+    .share-btn{
+        background-color: #ECF2F8;
+        width: 32px;
+        height: 32px;
+        border-radius: 100%;
+        position: absolute;
+        right: 30px;
+        bottom: 15px;
+        z-index: 100;
+        svg{
+            position: relative;
+            left: 9px;
+            top: 1px;
+        }
+        
+    }
+}
+.btm-section{
+    display: flex;
+    justify-content: space-between;
+}
+
+@media only screen and (min-width: 992px){
+    .card{
+        width: 730px;
+        height: 280px;
+    }
+    .img{
+        height: 100%;
+        background-size: 120%;
+        border-radius: 8px 0 0 8px;
+        background-position: 0 0;
+    }
+    h1{
+        font-size: 1.25em;
+        margin-bottom: 5%;
+    }
+    .card-body{
+        padding: 7.5% 9%;
+    }
+    .btm-section{
+        align-items: center;
+    }
+    .share{
+        .share-btn{
+            &:hover{
+                background-color: #6E8098;
+                svg{
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+        .active{
+            background-color: #6E8098;
+            svg{
+                path{
+                    fill: #fff;
+                }
+            }
+        }
+        .share-options{
+            width: 250px;
+            height: 55px;
+            justify-content: space-around;
+            border-radius: 10px;
+            filter: drop-shadow(5px 5px 5px #C9D5E1);
+            top: 150px;
+            left: 560px;
+            &::after{
+                content: "";
+                position: absolute;
+                top: 55px;
+                border-width: 10px;
+                border-style: solid;
+                border-color: #48556A transparent transparent transparent;
+            }
+        }
+    }
+}
